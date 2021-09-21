@@ -1,7 +1,7 @@
 .banner {
   padding-top: em(270, $fz);
   padding-bottom: em(90, $fz);
-  background-image: url('./img/bg.jpg');
+  background-image: url('../img/bg.jpg');
 
   @include media(tablet) {
     padding-top: em(145, $fz);
