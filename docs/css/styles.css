@@ -317,7 +317,7 @@ body {
 .banner {
   padding-top: 16.875em;
   padding-bottom: 5.625em;
-  background-image: url("/img/bg.jpg");
+  background-image: url("./img/bg.jpg");
 }
 
 .banner__wrapper {
@@ -742,7 +742,7 @@ body {
   overflow: auto;
   resize: none;
   border-radius: 0.625em;
-  background-image: url("/img/footer/ball.png");
+  background-image: url("./img/footer/ball.png");
   background-position: calc(100% - 1.5625em) 1.5625em;
   background-repeat: no-repeat;
   background-size: 2.4375em 2.4375em;
