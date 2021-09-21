@@ -1,0 +1,14 @@
+.title {
+  text-transform: uppercase;
+
+  &__text {
+    $fz: 85;
+    font-family: 'Oswald', 'Roboto', sans-serif;
+    font-size: em($fz, $fz_base);
+    color: color(secondary);
+
+    &--is-colored {
+      color: color(theme);
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.link {
+  $self: &;
+
+  &--is-button {
+    display: inline-block;
+    padding: em(25, $fz);
+    border-radius: em(10, $fz);
+    background-color: color(theme);
+    text-align: center;
+    text-transform: uppercase;
+
+    #{$self}__text {
+      color: color(primary);
+    }
+  }
+}
+
+.button {
+  padding: em(25, $fz);
+  border-radius: em(10, $fz);
+  background-color: color(theme);
+  text-align: center;
+  text-transform: uppercase;
+  transition: opacity 0.3s ease-in-out;
+
+  &__text {
+    color: color(primary);
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+}

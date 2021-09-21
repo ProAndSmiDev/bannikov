@@ -1,0 +1,17 @@
+include ../../components/global/menu/Index
+include ../../components/global/title/Index
+include ../../components/global/button/Index
+include ../../components/global/info/Index
+include ../../components/global/socials/Index
+
+mixin genMeta(name, content)
+    meta(name=name content=content)
+
+mixin genLink(file, rel)
+    if(rel === 'shortcut icon')
+        link(href='/img/' + file, rel=rel)
+    else if(rel === 'stylesheet')
+        link(href='/css/' + file + '.css', rel=rel)
+
+mixin genScript(file)
+    script(src="/js/" + file + ".js")

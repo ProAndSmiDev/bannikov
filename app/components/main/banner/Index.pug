@@ -1,0 +1,13 @@
+section.banner.main__banner
+  .u-wrapper.u-wrapper--is-row.banner__wrapper
+    .banner__col
+      +genTitle('h1', 'banner', main.banner.title.uncolored, main.banner.title.colored)
+      +genButton('link', 'banner', main.banner.button.text, '#callform', '_self')
+
+    .banner__col
+      picture.banner-pic.banner__pic
+        source(srcset=`/img/banner/${main.banner.pic.name}.webp` type='image/webp')
+
+        img.banner-pic__img(src=`/img/banner/${main.banner.pic.name}.png` alt=main.banner.pic.alt)
+
+    +genSocials('banner', company.socials)

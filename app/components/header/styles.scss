@@ -1,0 +1,9 @@
+.header {
+  padding-top: em(53, $fz);
+  padding-bottom: em(53, $fz);
+
+  @include media(desktop) {
+    padding-top: em(25, $fz);
+    padding-bottom: em(25, $fz);
+  }
+}

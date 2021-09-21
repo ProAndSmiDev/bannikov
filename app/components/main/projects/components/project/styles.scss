@@ -1,0 +1,203 @@
+.project {
+  $self: &;
+  display: flex;
+  align-items: center;
+
+  @include media(tablet) {
+    flex-direction: column;
+  }
+
+  &--is-even {
+    position: relative;
+    min-height: em(960, $fz);
+
+    @include media(tablet) {
+      min-height: 100%;
+    }
+
+    #{$self} {
+      &__pic {
+        border-radius: em(10, $fz);
+      }
+
+      &__col {
+        &:nth-child(1) {
+          position: relative;
+          z-index: 1;
+          padding: em(110 85, $fz);
+          margin-left: auto;
+          border-radius: em(10, $fz);
+          background-color: #e6e6ed;
+
+          @include media(tablet) {
+            background-color: unset;
+            padding: 0;
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &--is-odd-thd {
+    @include media(tablet) {
+      align-items: start;
+    }
+
+    #{$self} {
+      &__pic {
+        border-radius: em(10, $fz);
+      }
+
+      &__col {
+        &:nth-child(1) {
+          max-width: em(360, $fz);
+
+          @include media(tablet) {
+            max-width: 100%;
+          }
+        }
+
+        &:nth-child(2) {
+          margin-left: em(90, $fz);
+
+          @include media(tablet) {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__pic {
+    @include media(tablet) {
+      max-height: em(320, $fz);
+    }
+  }
+
+  &__img {
+    @include media(tablet) {
+      object-position: center;
+    }
+  }
+
+  &__col {
+    flex-basis: em(810, $fz);
+    flex-shrink: 0;
+
+    &--is-info {
+      flex-basis: em(545, $fz);
+
+      @include media(tablet) {
+        margin-top: em(30, $fz);
+        flex-basis: 100%;
+      }
+    }
+
+    &:nth-child(2) {
+      @include media(tablet) {
+        flex-basis: 100%;
+        order: -1;
+      }
+    }
+
+    &--is-even ,
+    &--is-odd-thd {
+      flex-basis: em(960, $fz);
+
+      @include media(tablet) {
+        flex-basis: 100%;
+      }
+    }
+
+    &--is-even {
+      position: absolute;
+      order: -1;
+
+      @include media(tablet) {
+        position: static;
+      }
+
+      #{$self} {
+        &__pic {
+          max-width: em(960, $fz);
+        }
+      }
+    }
+  }
+
+  &__link {
+    width: 100%;
+    max-width: em(300, $fz);
+    margin-top: em(50, $fz);
+
+    @include media(tablet) {
+      padding: em(8, $fz);
+      margin-top: em(15, $fz);
+    }
+  }
+
+  &__info {
+    width: 100%;
+    margin-top: em(50, $fz);
+
+    @include media(tablet) {
+      margin-top: em(15, $fz);
+    }
+  }
+
+  &__strip {
+    position: relative;
+    margin-top: em(145, $fz);
+
+    @include media(tablet) {
+      margin-top: em(30, $fz);
+    }
+  }
+
+  .title {
+    text-transform: none;
+
+    &__text {
+      $fz: 26;
+      font-family: 'Roboto', sans-serif;
+      font-size: em($fz, $fz_base);
+      font-weight: 700;
+
+      &--is-colored {
+        color: color(secondary);
+      }
+    }
+  }
+
+  .link {
+    &__text {
+      @include media(tablet) {
+        $fz: 12;
+        font-size: em($fz, $fz_base);
+      }
+    }
+  }
+}
+
+.strip {
+  &__link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+  }
+}
+
+.strip-link {
+  @include media(tablet) {
+    font-size: vw(7, 320);
+  }
+
+  &__arrow {
+    display: inline-block;
+    border-top: em(53, $fz) solid transparent;
+    border-bottom: em(53, $fz) solid transparent;
+    border-left: em(80, $fz) solid color(primary);
+  }
+}

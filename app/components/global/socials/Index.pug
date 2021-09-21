@@ -1,0 +1,12 @@
+//-
+  Генерирует менюшку с соц сетями:
+  +genSocials('banner', company.socials)
+
+mixin genSocials(parent, content)
+  ul.socials(class=`${(parent) ? parent + '__socials': ''}`)
+    for item in content
+      li.socials__item
+        a.socials-link.list__link(href=item.link title=item.title target="_blank")
+          picture.socials-link__pic
+            source(srcset=`/img/socials/${item.pic.name}.webp` type='image/webp')
+            img.socials-link__img(src=`/img/socials/${item.pic.name}.jpg` alt=item.pic.alt)

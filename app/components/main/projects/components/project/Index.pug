@@ -1,0 +1,33 @@
+mixin genProject(item, count)
+  -
+    const counter = count + 1;
+    let classProject = 'project--';
+    let className = 'project__col--';
+
+    if (counter % 2 === 0) {
+      className += 'is-even';
+      classProject += 'is-even';
+    } else if (counter % 3 === 0) {
+      className += 'is-odd-thd';
+      classProject += 'is-odd-thd';
+    } else {
+      className = ''
+      classProject = ''
+    }
+  article.project.list__project(class=classProject)
+    .project__col.project__col--is-info
+      +genTitle('h3', 'project', item.title)
+      +genInfo('project', item.text)
+      if item.button
+        +genButton('link', 'project', item.button.text, item.button.link, '_blank')
+    .project__col(class=className)
+      picture.project__pic
+        source(srcset=`/img/projects/${item.pic.name}.webp` type='image/webp')
+        img.project__img(src=`/img/projects/${item.pic.name}.png` alt=item.pic.alt)
+  if item.dividedBy
+    .strip.project__strip
+      a.strip-link.strip__link(href=item.dividedBy.link target='_blank')
+        span.strip-link__arrow
+      picture.strip__pic
+        source(srcset=`/img/projects/divisions/${item.dividedBy.pic.name}.webp` type='image/webp')
+        img.strip__img(src=`/img/projects/divisions/${item.dividedBy.pic.name}.img` alt=item.dividedBy.pic.alt)

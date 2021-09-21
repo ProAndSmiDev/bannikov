@@ -1,0 +1,128 @@
+.banner {
+  padding-top: em(270, $fz);
+  padding-bottom: em(90, $fz);
+  background-image: url('/img/bg.jpg');
+
+  @include media(tablet) {
+    padding-top: em(145, $fz);
+    padding-bottom: em(45, $fz);
+  }
+
+  &__wrapper {
+    position: relative;
+
+    @include media(tablet) {
+      flex-direction: column;
+    }
+  }
+
+  &__col {
+    &:nth-child(1) {
+      @include media(tablet) {
+        margin-top: em(30, $fz);
+        text-align: center;
+      }
+    }
+
+    &:nth-child(2) {
+      position: absolute;
+      right: em(55, $fz);
+      bottom: 0;
+
+      @include media(tablet) {
+        position: static;
+        order: -1;
+      }
+    }
+  }
+
+  &__socials {
+    position: absolute;
+    right: 0;
+
+    @include media(tablet) {
+      position: static;
+      margin-top: em(30, $fz);
+    }
+  }
+
+  &__title {
+    width: 100%;
+    max-width: em(570, $fz);
+  }
+
+  &__link {
+    width: 100%;
+    max-width: em(300, $fz);
+    margin-top: em(85, $fz);
+
+    @include media(tablet) {
+      max-width: em(190, $fz);
+      margin-top: em(30, $fz);
+    }
+  }
+
+  &__pic {
+    max-width: em(862, $fz);
+
+    @include media(tablet) {
+      $fz: 19;
+      max-width: em(320, $fz);
+    }
+
+    @include media(smartphone) {
+      $fz: 12;
+      max-width: em(280, $fz);
+    }
+  }
+
+  &__title {
+    .title {
+      &__text {
+        color: color(primary);
+
+        @include media(tablet) {
+          $fz: 36;
+          font-size: em($fz, $fz_base);
+        }
+      }
+    }
+  }
+
+  .socials {
+    flex-direction: column;
+    align-self: flex-end;
+
+    @include media(tablet) {
+      flex-direction: row;
+      align-self: inherit;
+    }
+
+    &__item {
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: em(20, $fz);
+
+        @include media(tablet) {
+          margin-right: em(15, $fz);
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .link {
+    &__text {
+      @include media(tablet) {
+        $fz: 12;
+        font-size: em($fz, $fz_base);;
+      }
+    }
+
+    &--is-button {
+      @include media(tablet) {
+        padding: em(8, $fz);
+      }
+    }
+  }
+}

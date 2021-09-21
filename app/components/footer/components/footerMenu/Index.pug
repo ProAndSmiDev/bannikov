@@ -1,0 +1,5 @@
+ul.footer-menu.footer__menu
+  for item in footer.menu
+    li.footer-menu__item
+      a.footer-menu-link.footer-menu__link(href=item.link title=item.title target='_blank')
+        span.footer-menu-link__text= item.text

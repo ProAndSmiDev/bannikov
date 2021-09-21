@@ -1,0 +1,20 @@
+include helpers/_mixins
+doctype html
+html(lang="ru")
+  head
+    meta(http-equiv="Content-Type" content="text/html; charset=UTF-8")
+    +genMeta('viewport', 'width=device-width, initial-scale=1')
+    block SEO
+    each val, i in copyright
+      +genMeta(i, val)
+    +genLink('favicon.ico', 'shortcut icon')
+    +genLink('styles', 'stylesheet')
+  body
+    .landing-page
+      include ../components/header/Index
+
+      include ../components/main/Index
+
+      include ../components/footer/Index
+
+    +genScript('app.min')

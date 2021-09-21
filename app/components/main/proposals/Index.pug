@@ -1,0 +1,10 @@
+include components/proposal/Index
+
+section#proposals.proposals
+  .u-wrapper.proposals__wrapper
+    +genTitle('h2', 'proposals', main.proposals.title.uncolored, main.proposals.title.colored)
+
+    ul.list.proposals__list
+      for proposal in main.proposals.items
+        li.list__item
+          +genProposal('list', proposal.text, proposal.icon)

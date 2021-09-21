@@ -1,0 +1,193 @@
+{
+  "company": {
+    "logo": {
+      "fileName": "logo",
+      "alt": "Лого Bannikov Online",
+      "url": "#",
+      "urlTitle": "Лого с переходом на главную"
+    },
+    "socials": [
+      {
+        "title": "Viber",
+        "link": "#",
+        "pic": {
+          "name": "viber",
+          "alt": "Найдите нас в Viber!"
+        }
+      },
+      {
+        "title": "Telegram",
+        "link": "#",
+        "pic": {
+          "name": "telegram",
+          "alt": "Найдите нас в Телеграм!"
+        }
+      },
+      {
+        "title": "WhatsApp",
+        "link": "#",
+        "pic": {
+          "name": "whatsapp",
+          "alt": "Найдите нас в WhatsApp!"
+        }
+      }
+    ],
+    "seoInfo": {
+      "title": "Bannikov Online - лучшее решение для рекламы Вашего бизнеса!",
+      "keywords": "bannikov, marketing, SMM",
+      "description": "Bannikov Online - полное продвижение Вашего сайта"
+    }
+  },
+  "header": {
+    "menu": [
+      {
+        "text": "Главная",
+        "link": "#",
+        "title": "главную"
+      },
+      {
+        "text": "Мы предлагаем",
+        "link": "#our-proposals",
+        "title": "наши предложения"
+      },
+      {
+        "text": "Примеры работ",
+        "link": "#our-projects",
+        "title": "наши проекты"
+      }
+    ],
+    "logo": {
+      "pic": "logo.png",
+      "alt": "Логотип Bannikov Online"
+    }
+  },
+  "main": {
+    "banner": {
+      "title": {
+        "uncolored": "Рекламное агентство",
+        "colored": "Полного цикла"
+      },
+      "pic": {
+        "name": "analyze",
+        "alt": "Подробная статистика и анализ"
+      },
+      "button": {
+        "text": "Свяжитесь с нами"
+      }
+    },
+    "proposals": {
+      "title": {
+        "uncolored": "Мы",
+        "colored": "Предлагаем"
+      },
+      "items": [
+        {
+          "text": "Брендинг",
+          "icon": "brand"
+        },
+        {
+          "text": "Айдентика",
+          "icon": "identic"
+        },
+        {
+          "text": "UI/UX",
+          "icon": "ui-ux"
+        },
+        {
+          "text": "Веб-дизайн",
+          "icon": "web-design"
+        },
+        {
+          "text": "Разработка приложений iOS, ANdroid",
+          "icon": "apps"
+        },
+        {
+          "text": "CSS анимация",
+          "icon": "animations"
+        }
+      ]
+    },
+    "projects": {
+      "title": {
+        "uncolored": "Примеры",
+        "colored": "Работ"
+      },
+      "items": [
+        {
+          "title": "Ut enim ad minima veniam",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+          "button": {
+            "text": "Подробнее",
+            "link": "#"
+          },
+          "pic": {
+            "name": "1",
+            "alt": "Мониторы с проектом make-air"
+          },
+          "dividedBy": {
+            "pic": {
+              "name": "1",
+              "alt": "Фон-подложка для ссылки на видео"
+            },
+            "link": "#"
+          }
+        },
+        {
+          "title": "Ut enim ad minima veniam",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+          "button": false,
+          "pic": {
+            "name": "2",
+            "alt": "Дизайн одежды"
+          },
+          "dividedBy": ""
+        },
+        {
+          "title": "Ut enim ad minima veniam",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+          "button": {
+            "text": "Подробнее",
+            "link": "#"
+          },
+          "pic": {
+            "name": "3",
+            "alt": "Дизайн одежды и сумок"
+          },
+          "dividedBy": ""
+        }
+      ]
+    }
+  },
+  "footer": {
+    "pic": {
+      "name": "bannikov",
+      "alt": "Фото Bannikov Online"
+    },
+    "callform": {
+      "title": "Свяжитесь с нами",
+      "nameInput": "Ваше имя",
+      "phoneInput": "Телефонный номер",
+      "emailInput": "Ваш E-mail",
+      "commentTextArea": "Добавьте комментарий",
+      "agree": "Даю согласие на обработку данных",
+      "button": "Отправить"
+    },
+    "copyright": "&copy;Copyright. All rights reserved.",
+    "menu": [
+      {
+        "title": "Перейти на политику конфиденциальности",
+        "link": "#",
+        "text": "Политика конфиденциальности"
+      },
+      {
+        "title": "Перейти на правила использования сайта",
+        "link": "#",
+        "text": "Правила использования сайта"
+      }
+    ]
+  },
+  "copyright": {
+    "author": "AndSmi",
+    "copyright": "Developed by AndSmi"
+  }
+}

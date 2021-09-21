@@ -1,0 +1,23 @@
+// Глобальные компоненты
+@import '../components/_global';
+@import '../../../components/global/logo/styles';
+@import '../../../components/global/menu/styles';
+@import '../../../components/global/title/styles';
+@import '../../../components/global/button/styles';
+@import '../../../components/global/info/styles';
+@import '../../../components/global/socials/styles';
+
+// Постраничные компоненты
+@import '../../../components/header/styles';
+
+@import '../../../components/main/styles';
+@import '../../../components/main/banner/styles';
+@import '../../../components/main/proposals/styles';
+@import '../../../components/main/proposals/components/proposal/styles';
+@import '../../../components/main/projects/styles';
+@import '../../../components/main/projects/components/project/styles';
+
+@import '../../../components/footer/styles';
+@import '../../../components/footer/components/callform/styles';
+@import '../../../components/footer/components/copyright/styles';
+@import '../../../components/footer/components/footerMenu/styles';

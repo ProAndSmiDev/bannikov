@@ -1,0 +1,82 @@
+.footer {
+  .u-wrapper {
+    &--is-row {
+      @include media(tablet) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__pic {
+    max-width: em(1665, $fz);
+
+    @include media(desktop) {
+      max-width: em(1000, $fz);
+    }
+  }
+
+  &__upper {
+    padding-top: em(105, $fz);
+    padding-bottom: em(105, $fz);
+
+    @include media(tablet) {
+      padding-top: em(30, $fz);
+      padding-bottom: em(30, $fz);
+    }
+  }
+
+  &__central {
+    padding-top: em(35, $fz);
+    padding-bottom: em(35, $fz);
+    border-top: 1px solid desaturate(color(secondary), 50%);
+    
+    @include media(tablet) {
+      padding-top: em(15, $fz);
+      padding-bottom: em(15, $fz);
+    }
+
+    .footer & .u-wrapper {
+      &--is-row {
+        flex-direction: row;
+      }
+    }
+  }
+
+  &__upper,
+  &__central {
+    background-color: darken(saturate(color(secondary), 5%), 10%);
+  }
+
+  &__lower {
+    padding-top: em(20, $fz);
+    padding-bottom: em(20, $fz);
+    background-color: darken(saturate(color(secondary), 2%), 14%);
+  }
+
+  &__menu {
+    @include media(tablet) {
+      order: -1;
+      margin-bottom: em(15, $fz);
+    }
+  }
+
+  &__callform {
+    width: 100%;
+    margin-top: em(85, $fz);
+
+    @include media(tablet) {
+      margin-top: em(30, $fz);
+    }
+  }
+
+  &__title {
+    .title {
+      &__text {
+        @include media(tablet) {
+          $fz: 30;
+          font-size: em($fz, $fz_base);
+        }
+      }
+    }
+  }
+}

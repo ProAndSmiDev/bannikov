@@ -1,0 +1,46 @@
+//-
+  Генерирует label с текстом для ФОС
+mixin genFieldTitle(fieldTitle, field)
+  if fieldTitle
+    label.callform-field-title.callform-field__title(for='#' + field)
+      span.callform-field-title__text= fieldTitle
+
+//-
+  Генерирует checkbox с текстом для ФОС
+mixin genFieldCheckBox(fieldName, isRequired, fieldTitle)
+  fieldset.callform-field.callform__field.callform-field--is-checkbox
+    input#usercheck.callform-field__input(type='checkbox' name=fieldName required=isRequired)
+    label.callform-field__checkbox(for='usercheck')
+    p.callform-field-agree.callform-field__agree
+      span.callform-field-agree__text= fieldTitle
+
+//-
+  Генерирует input с текстом для ФОС
+mixin genFieldInput(fieldType, fieldPlaceholder, fieldName, isRequired, fieldTitle, fieldLink)
+  if fieldType !== 'checkbox'
+    fieldset.callform-field.callform__field(class=`callform-field--is-${fieldType}`)
+      +genFieldTitle(fieldTitle, fieldLink)
+      input.callform-field__input(type=fieldType placeholder=fieldPlaceholder name=fieldName required=isRequired autocomplete="off")
+  else
+    +genFieldCheckBox(fieldName, isRequired, fieldTitle)
+
+//-
+  Генерирует textarea с текстом для ФОС
+mixin genFieldTextArea(placeholder, name, fieldTitle, fieldLink)
+  fieldset.callform-field.callform__field.callform-field--is-textarea
+    +genFieldTitle(fieldTitle, fieldLink)
+    textarea.callform-field__textarea(id=fieldLink placeholder=placeholder name=name autocomplete="off")
+
+//-
+  Генерирует полностью ФОС
+mixin genCallForm(parent)
+  form#callform.callform(method='post' action='' class=`${(parent) ? parent + '__callform': ''}`)
+    .callform__col
+      +genFieldInput('text', footer.callform.nameInput, 'userName', true)
+      +genFieldInput('text', footer.callform.phoneInput, 'userPhone', true)
+      +genFieldInput('email', footer.callform.emailInput, 'userEmail')
+    .callform__col
+      +genFieldTextArea(footer.callform.commentTextArea, 'userComment')
+    .callform__col
+      +genFieldInput('checkbox', '', 'userCheck', true, footer.callform.agree)
+      +genButton('button', 'callform', footer.callform.button, '', '', 'submit')

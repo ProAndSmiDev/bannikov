@@ -1,0 +1,34 @@
+.projects {
+  &__wrapper {
+    align-items: start;
+  }
+
+  &__list {
+    flex-direction: column;
+    margin-top: em(60, $fz);
+  }
+
+  &__title {
+    .title {
+      &__text {
+        @include media(tablet) {
+          $fz: 30;
+          font-size: em($fz, $fz_base);
+        }
+      }
+    }
+  }
+
+  .list {
+    &__item {
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: em(110, $fz);
+
+        @include media(tablet) {
+          margin-bottom: em(30, $fz);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+include components/project/Index
+
+section#projects.projects
+  .u-wrapper.projects__wrapper
+    +genTitle('h2', 'projects', main.projects.title.uncolored, main.projects.title.colored)
+
+    ul.list.projects__list
+      for project, idx in main.projects.items
+        li.list__item
+          +genProject(project, idx)

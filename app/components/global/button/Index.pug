@@ -1,0 +1,13 @@
+//-
+  Генерирует нужную кнопку:
+  +genButton('link', 'banner', 'More', '#', '_blank')
+  +genButton('button', 'banner', 'More', '', '')
+
+mixin genButton(type, parent, text, link, target, buttonType)
+  if type === 'link'
+    a.link.link--is-button(href=link, target=target class=`${(parent) ? parent + '__link' : ''}`)
+      span.link__text= text
+
+  else
+    button.button(class=`${(parent) ? parent + '__button' : ''}` type=`${(buttonType) ? buttonType : type }`)
+      span.button__text= text

@@ -1,0 +1,13 @@
+.socials {
+  &__item {
+    &:not(:last-child) {
+      margin-right: em(15, $fz);
+    }
+  }
+}
+
+.socials-link {
+  &__pic {
+    max-width: em(30, $fz);
+  }
+}

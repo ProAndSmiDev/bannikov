@@ -1,0 +1,9 @@
+.logo {
+  &__pic {
+    max-width: em(210, $fz);
+
+    @include media(desktop) {
+      max-width: em(120, $fz);
+    }
+  }
+}

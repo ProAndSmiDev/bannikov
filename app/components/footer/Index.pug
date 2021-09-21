@@ -1,0 +1,19 @@
+include components/callform/Index
+include components/copyright/Index
+
+footer.footer.landing-page__footer
+  picture.footer__pic
+    source(srcset=`/img/footer/${footer.pic.name}.webp` type='image/webp')
+    img.footer__img(src=`/img/footer/${footer.pic.name}.png` alt=footer.pic.alt)
+  .footer__upper
+    .u-wrapper.footer__wrapper
+      +genTitle('h2', 'footer', '', footer.callform.title)
+      +genCallForm('footer')
+  .footer__central
+    .u-wrapper.u-wrapper--is-row.footer__wrapper
+      include ../global/logo/Index
+      +genSocials('footer', company.socials)
+  .footer__lower
+    .u-wrapper.u-wrapper--is-row.footer__wrapper
+      +genCopyright('footer', footer.copyright)
+      include components/footerMenu/Index

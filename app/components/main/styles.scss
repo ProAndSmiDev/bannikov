@@ -1,0 +1,9 @@
+.main {
+  &__banner {
+    min-height: em(900, $fz);
+
+    @include media(desktop) {
+      min-height: em(480, $fz);
+    }
+  }
+}

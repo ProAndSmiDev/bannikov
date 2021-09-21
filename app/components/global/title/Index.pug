@@ -1,0 +1,15 @@
+//-
+  Генерирует нужный заголовок:
+  +genTitle('h1', 'banner', 'hello', 'world')
+
+mixin genTitle(type, parent, text, coloredText)
+  #{type}.title(class=`${(parent) ? parent + '__title' : ''}`)
+    if text
+      if coloredText
+        span.title__text= text + ' '
+          span.title__text--is-colored= coloredText
+      else
+        span.title__text= text
+    else
+      span.title__text
+        span.title__text--is-colored= coloredText

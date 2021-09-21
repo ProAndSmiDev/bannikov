@@ -1,0 +1,15 @@
+//-
+  Генерирует основное меню сайта:
+  +genMenu('header', header.menu)
+
+mixin genMenu(parent, menu)
+  nav.nav(class=`${(parent) ? parent + '__nav' : ''}`)
+    button.nav-burger.nav__burger.js--toggle-burger(aria-label='Открыть/Закрыть меню на мобильном устройстве')
+      span.nav-burger__line
+      span.nav-burger__line
+      span.nav-burger__line
+    ul.nav-list.nav__list.js--toggle-by-burger
+      for item in menu
+        li.nav-list__item
+          a.nav-list-link.nav-list__link(href=item.link title=`Перейти на ${item.title}`)
+            span.nav-list-link__text= item.text

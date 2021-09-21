@@ -1,0 +1,58 @@
+body {
+  background-color: darken(color(primary), 2%);
+  font: #{$fz_base}px/1.2 '#{$main_font}','Arial', sans-serif;
+}
+
+.header {
+  &--is-absoluted {
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+  }
+}
+
+.header,
+.main,
+.footer {
+  @include media(fullHD) {
+    font-size: vw(16, 1920);
+  }
+
+  @include media(desktop) {
+    font-size: vw(8, 768);
+  }
+
+  @include media(tablet) {
+    font-size: vw(19, 576);
+  }
+
+  @include media(smartphone) {
+    font-size: vw(12, 320);
+  }
+}
+
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.u-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: em(15, $fz);
+  padding-left: em(15, $fz);
+  width: 100%;
+  max-width: em(1456, $fz);
+  margin-right: auto;
+  margin-left: auto;
+
+  &--is-row {
+    flex-direction: row;
+  }
+}

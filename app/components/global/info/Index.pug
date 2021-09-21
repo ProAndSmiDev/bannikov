@@ -1,0 +1,7 @@
+//-
+  Генерирует блок с текстом:
+  +genInfo('projects', 'some text')
+
+mixin genInfo(parent, text)
+  p.info(class=`${(parent) ? parent + '__info' : ''}`)
+    span.info__text= text
