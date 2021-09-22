@@ -1,6 +1,6 @@
 mixin genProposal(parent, text, icon)
   article.proposal(class=`${parent}__proposal`)
     svg.proposal-icon.proposal__icon
-      use(xlink:href='/img/sprite.svg#proposals--' + icon)
+      use(xlink:href='./img/sprite.svg#proposals--' + icon)
     +genTitle('h3', 'proposal', text)
 

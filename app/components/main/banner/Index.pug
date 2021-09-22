@@ -6,8 +6,8 @@ section.banner.main__banner
 
     .banner__col
       picture.banner-pic.banner__pic
-        source(srcset=`/img/banner/${main.banner.pic.name}.webp` type='image/webp')
+        source(srcset=`./img/banner/${main.banner.pic.name}.webp` type='image/webp')
 
-        img.banner-pic__img(src=`/img/banner/${main.banner.pic.name}.png` alt=main.banner.pic.alt)
+        img.banner-pic__img(src=`./img/banner/${main.banner.pic.name}.png` alt=main.banner.pic.alt)
 
     +genSocials('banner', company.socials)
