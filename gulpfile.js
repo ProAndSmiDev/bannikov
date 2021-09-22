@@ -18,6 +18,8 @@ const ttf2woff2 = require('gulp-ttf2woff2');
 const ttf2woff = require('gulp-ttf2woff');
 const gcmq = require('gulp-group-css-media-queries');
 const csso = require('gulp-csso');
+const browserify = require('gulp-bro');
+const babelify = require('babelify');
 
 const isProd = (process.env.NODE_ENV === 'prod');
 const root = {
@@ -94,6 +96,21 @@ const jsMin = series(() => {
     .pipe(dest(prod.js));
 });
 /* Работа со скриптами */
+
+/* Работа с библиотеками  */
+const getModules = () => {
+  return src(dev.libs)
+    .pipe(browserify({
+      transform: [
+        babelify.configure({
+          presets: ['@babel/env'],
+        }),
+      ],
+    }))
+    .pipe(rename('libs.min.js'))
+    .pipe(dest(prod.js));
+};
+/* Работа с библиотеками  */
 
 /* Работа с шаблонизатором */
 const pug2html = () => {
@@ -178,11 +195,12 @@ const watchFiles = () => {
   });
 
   watch(dev.fonts, fonts);
-  watch(dev.svg, svg2sprite);
   watch(dev.media, imgOpt);
+  watch(dev.svg, svg2sprite);
+  watch(dev.libs, getModules);
   watch([dev.js, dev.libs, dev.jsHelpers], jsMin);
-  watch([`${root.dev}assets/scss/**/*.scss`, `${root.dev}components/**/*.scss`], stylesMin);
   watch([root.data, `${root.dev}**/*.pug`], pug2html);
+  watch([`${root.dev}assets/scss/**/*.scss`, `${root.dev}components/**/*.scss`], stylesMin);
 };
 /* работа с localhost */
 
@@ -190,7 +208,7 @@ const watchFiles = () => {
 const buildProd = parallel([
   parallel(fonts, imgOpt),
   series(pug2html, stylesMin),
-  series(jsMin, svg2sprite),
+  series(getModules, jsMin, svg2sprite),
 ]);
 /* Работа с изначальной сборкой проекта */
 
