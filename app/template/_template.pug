@@ -8,7 +8,7 @@ html(lang="ru")
     each val, i in copyright
       +genMeta(i, val)
     +genLink('favicon.ico', 'shortcut icon')
-    +genLink('styles', 'stylesheet')
+    +genLink('styles.min', 'stylesheet')
   body
     .landing-page
       include ../components/header/Index
