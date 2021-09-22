@@ -1,5 +1,6 @@
 .info {
   &__text {
+    line-height: em(26, $fz);
     color: color(secondary);
   }
 }

@@ -15,6 +15,7 @@ const imgMin = require('gulp-imagemin');
 const webp = require('gulp-webp');
 const pngQuant = require('imagemin-pngquant');
 const ttf2woff2 = require('gulp-ttf2woff2');
+const ttf2woff = require('gulp-ttf2woff');
 const gcmq = require('gulp-group-css-media-queries');
 const csso = require('gulp-csso');
 
@@ -156,6 +157,7 @@ const imgOpt = series([imgOptWebp], () => {
 /* Работа со шрифтами */
 const fonts = () => {
   src(dev.fonts)
+    .pipe(ttf2woff())
     .pipe(sync.stream())
     .pipe(dest(prod.fonts));
 

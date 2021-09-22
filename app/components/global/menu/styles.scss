@@ -1,11 +1,18 @@
 .nav {
   @include media(tablet) {
     &__list {
+      $fz: 19;
+      min-height: em(300, $fz);
       position: absolute;
       top: 100%;
       left: -100%;
       width: 100%;
       transition: left 0.3s ease-in-out;
+
+      @include media(smartphone) {
+        $fz: 12;
+        min-height: em(240, $fz);
+      }
     }
   }
 }
@@ -58,10 +65,11 @@
   padding: em(15, $fz);
 
   @include media(tablet) {
+    $fz: 12;
     display: block;
     text-align: center;
     text-transform: uppercase;
-    padding: em(5, $fz);
+    padding: em(10, $fz);
   }
 
   &__text {

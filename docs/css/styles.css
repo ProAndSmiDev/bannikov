@@ -35,35 +35,35 @@
   font-family: "Roboto";
   font-display: swap;
   font-weight: 300;
-  src: url("../fonts/Roboto/Roboto-Light.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Light.ttf") format("truetype");
+  src: url("../fonts/Roboto/Roboto-Light.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Light.woff") format("woff");
 }
 
 @font-face {
   font-family: "Oswald";
   font-display: swap;
   font-weight: 300;
-  src: url("../fonts/Oswald/Oswald-Light.woff2") format("woff2"), url("../fonts/Oswald/Oswald-Light.ttf") format("truetype");
+  src: url("../fonts/Oswald/Oswald-Light.woff2") format("woff2"), url("../fonts/Oswald/Oswald-Light.woff") format("woff");
 }
 
 @font-face {
   font-family: "Roboto";
   font-display: swap;
   font-weight: 400;
-  src: url("../fonts/Roboto/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+  src: url("../fonts/Roboto/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Regular.woff") format("woff");
 }
 
 @font-face {
   font-family: "Raleway";
   font-display: swap;
   font-weight: 400;
-  src: url("../fonts/Raleway/Raleway-Regular.woff2") format("woff2"), url("../fonts/Raleway/Raleway-Regular.ttf") format("truetype");
+  src: url("../fonts/Raleway/Raleway-Regular.woff2") format("woff2"), url("../fonts/Raleway/Raleway-Regular.woff") format("woff");
 }
 
 @font-face {
   font-family: "Roboto";
   font-display: swap;
   font-weight: 700;
-  src: url("../fonts/Roboto/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+  src: url("../fonts/Roboto/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Bold.woff") format("woff");
 }
 
 * {
@@ -294,6 +294,7 @@ body {
 }
 
 .info__text {
+  line-height: 1.625em;
   color: #070750;
 }
 
@@ -317,7 +318,7 @@ body {
 .banner {
   padding-top: 16.875em;
   padding-bottom: 5.625em;
-  background-image: url("../img/bg.jpg");
+  background-image: url("/img/bg.jpg");
 }
 
 .banner__wrapper {
@@ -742,7 +743,7 @@ body {
   overflow: auto;
   resize: none;
   border-radius: 0.625em;
-  background-image: url("../img/footer/ball.png");
+  background-image: url("/img/footer/ball.png");
   background-position: calc(100% - 1.5625em) 1.5625em;
   background-repeat: no-repeat;
   background-size: 2.4375em 2.4375em;
@@ -824,7 +825,7 @@ body {
   .header,
   .main,
   .footer {
-    font-size: 0.83333vw;
+    font-size: 1.07422vw;
   }
 }
 
@@ -836,7 +837,7 @@ body {
   }
 
   .logo__pic {
-    max-width: 7.5em;
+    max-width: 15em;
   }
 
   .header {
@@ -860,7 +861,12 @@ body {
     font-size: 3.29861vw;
   }
 
+  .logo__pic {
+    max-width: 6.31579em;
+  }
+
   .nav__list {
+    min-height: 15.78947em;
     position: absolute;
     top: 100%;
     left: -100%;
@@ -921,7 +927,7 @@ body {
     display: block;
     text-align: center;
     text-transform: uppercase;
-    padding: 0.3125em;
+    padding: 0.83333em;
   }
 
   .nav-list-link__text {
@@ -929,8 +935,8 @@ body {
   }
 
   .banner {
-    padding-top: 9.0625em;
-    padding-bottom: 2.8125em;
+    padding-top: 7.63158em;
+    padding-bottom: 2.36842em;
   }
 
   .banner__wrapper {
@@ -960,8 +966,8 @@ body {
   }
 
   .banner__link {
-    max-width: 11.875em;
-    margin-top: 1.875em;
+    max-width: 10em;
+    margin-top: 1.57895em;
   }
 
   .banner__pic {
@@ -986,6 +992,14 @@ body {
   .banner .socials__item:not(:last-child) {
     margin-right: 0.9375em;
     margin-bottom: 0;
+  }
+
+  .banner .link {
+    border-radius: 0.26316em;
+    -webkit-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    transform: translateY(-2px);
+    display: inline-block;
   }
 
   .banner .link__text {
@@ -1125,8 +1139,16 @@ body {
     margin-top: 1.875em;
   }
 
+  .project .link {
+    border-radius: 0.26316em;
+  }
+
   .project .link__text {
     font-size: 0.75em;
+    -webkit-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    transform: translateY(-2px);
+    display: inline-block;
   }
 
   .strip-link {
@@ -1230,6 +1252,12 @@ body {
   }
 }
 
+@media (max-width: 767px) and (max-width: 575px) {
+  .nav__list {
+    min-height: 20em;
+  }
+}
+
 @media (max-width: 575px) {
   .header,
   .main,
@@ -1239,6 +1267,20 @@ body {
 
   .banner__pic {
     max-width: 23.33333em;
+  }
+
+  .banner .link {
+    border-radius: 0.25em;
+  }
+
+  .project .link {
+    border-radius: 0.25em;
+  }
+
+  .project .link__text {
+    -webkit-transform: unset;
+    -ms-transform: unset;
+    transform: unset;
   }
 }
 /*# sourceMappingURL=styles.css.map */

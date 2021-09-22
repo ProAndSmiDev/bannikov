@@ -4,6 +4,7 @@
   background-image: url('../img/bg.jpg');
 
   @include media(tablet) {
+    $fz: 19;
     padding-top: em(145, $fz);
     padding-bottom: em(45, $fz);
   }
@@ -57,6 +58,7 @@
     margin-top: em(85, $fz);
 
     @include media(tablet) {
+      $fz: 19;
       max-width: em(190, $fz);
       margin-top: em(30, $fz);
     }
@@ -112,6 +114,18 @@
   }
 
   .link {
+    @include media(tablet) {
+      $fz: 19;
+      border-radius: em(5, $fz);
+      transform: translateY(-2px);
+      display: inline-block;
+    }
+
+    @include media(smartphone) {
+      $fz: 12;
+      border-radius: em(3, $fz);
+    }
+
     &__text {
       @include media(tablet) {
         $fz: 12;

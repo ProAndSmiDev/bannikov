@@ -15,7 +15,7 @@ body {
 .main,
 .footer {
   @include media(fullHD) {
-    font-size: vw(16, 1920);
+    font-size: vw(11, 1024);
   }
 
   @include media(desktop) {

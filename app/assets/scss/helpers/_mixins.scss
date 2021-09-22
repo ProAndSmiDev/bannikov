@@ -14,7 +14,7 @@
     }
     font-weight: $fontWeight;
     src: url('../fonts/#{$fontName}/#{$fileName}.woff2') format('woff2'),
-      url('../fonts/#{$fontName}/#{$fileName}.ttf') format('truetype');
+      url('../fonts/#{$fontName}/#{$fileName}.woff') format('woff');
   }
 }
 
@@ -60,19 +60,6 @@
         }
       }
     }
-  }
-}
-
-@mixin vw($size) {
-  $breakpoints: (
-    'FullHD': 1920px,
-  );
-
-  $vw-content: (map_get($breakpoints, 'FullHD') * 0.01) * 1px;
-  font-size: ($size/$vw-content) * 1vw;
-
-  @include media('>FullHD') {
-    font-size: $size;
   }
 }
 

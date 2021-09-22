@@ -114,8 +114,8 @@
       },
       "items": [
         {
-          "title": "Ut enim ad minima veniam",
-          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+          "title": "Ut&nbsp;enim ad&nbsp;minima veniam",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
           "button": {
             "text": "Подробнее",
             "link": "#"
@@ -133,8 +133,8 @@
           }
         },
         {
-          "title": "Ut enim ad minima veniam",
-          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+          "title": "Ut&nbsp;enim ad&nbsp;minima veniam",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
           "button": false,
           "pic": {
             "name": "2",
@@ -143,8 +143,8 @@
           "dividedBy": ""
         },
         {
-          "title": "Ut enim ad minima veniam",
-          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
+          "title": "Ut&nbsp;enim ad&nbsp;minima veniam",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.",
           "button": {
             "text": "Подробнее",
             "link": "#"

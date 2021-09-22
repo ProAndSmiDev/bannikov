@@ -3,6 +3,12 @@
     max-width: em(210, $fz);
 
     @include media(desktop) {
+      $fz: 8;
+      max-width: em(120, $fz);
+    }
+
+    @include media(tablet) {
+      $fz: 19;
       max-width: em(120, $fz);
     }
   }
